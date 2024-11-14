@@ -12,7 +12,8 @@ resetbutn.addEventListener("click", ()=>{
         box.disabled = false;
         winnershow.style.display ="";
         box.style.color="red";
-        
+        box.style.backgroundColor="";
+        playerx = true;
     });
 });
 winnerbtn.addEventListener("click", ()=>{
@@ -20,8 +21,9 @@ winnerbtn.addEventListener("click", ()=>{
         box.innerText="";
         box.disabled = false;
         winnershow.style.display ="";
-        box.style.color="brown"
-        
+        box.style.color="brown";
+        box.style.backgroundColor="";
+        playerx = true;
     });
 });
 
@@ -43,10 +45,12 @@ boxes.forEach((box)=>{
             box.innerText="X";
             playerx = false;
             box.style.color="yellow"
+            // first.style.backgroundColor = "orange";
         }else{
             box.innerText = "O";
             playerx = true; 
             box.style.color="orange"
+            // first.style.backgroundColor = "orange";
             
         }
         box.disabled = true;
@@ -67,8 +71,20 @@ const checkdraw = ()=>{
     }
     winnershow.style.display ="flex";
     messagewin.innerText ="Draw";
+    playerx = true;
 
 }
+const changebgclr = (f,s,t,clr)=>{
+    if(clr === "X"){
+        f.style.backgroundColor ="orange";
+        s.style.backgroundColor ="orange";
+        t.style.backgroundColor ="orange";
+    }else{
+        f.style.backgroundColor ="red";
+        s.style.backgroundColor ="red";
+        t.style.backgroundColor ="red";
+    }
+};
 const checkwinner = ()=>{
     for(let num of allPatterns){
         let first = boxes[num[0]].innerText;
@@ -80,6 +96,7 @@ const checkwinner = ()=>{
                 winnershow.style.display ="flex";
                 messagewin.innerText ="Winner is"+"  "+ first ;
                 disableallbt();
+                changebgclr(boxes[num[0]],boxes[num[1]],boxes[num[2]],first);
             }else{
                 checkdraw();
             }
