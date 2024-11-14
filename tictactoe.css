@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+#main{
+    background-color: rgba(194, 118, 194, 0.726);
+    display:flex;
+    height:100vh;
+    width:100vw;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    gap:2rem;
+    
+}
+#containermain{
+    /* background-color: rgb(21, 138, 125); */
+    height:70vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0.1rem;
+    /* align-self: center; */
+    /* margin:0 auto; */
+    
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    height: 22vmin;
+    width: 22vmin;
+    box-shadow: 5px 5px 10px 1px;
+    border-color: rgb(252, 120, 43);
+    background-color: rgba(67, 120, 167, 0.519);
+    color: brown;
+    font-size: 570%;
+}
+#text{
+    font-size: 6vmin;
+    color: rgb(174, 126, 14);
+}
+#resetbutn{
+    height:15vmin;
+    width:32vmin;
+    border-radius: 7px;
+    font-size: 6.5vmin;
+    background-color: black;
+    color: rgb(187, 224, 67);
+}
+#winnerbox{
+    display: none;
+    gap:5vmin;
+    flex-direction: column;
+    align-items: center;
+    height :50vmin;
+    width: 100vmin;
+    /* background-color: aqua; */
+}
+#new{
+    font-size: 8vmin;
+}
+#newbtn{
+    font-size: 5vmin;
+    padding:0.4rem;
+    border-radius: 10px;
+    background-color: rgb(49, 48, 48);
+    color: aliceblue;
+}
+.hide{
+    display: flex;
+}
+
