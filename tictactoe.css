@@ -73,4 +73,7 @@
 .hide{
     display: flex;
 }
+.box:hover{
+    background-color: rgb(55, 114, 133);
+}
 

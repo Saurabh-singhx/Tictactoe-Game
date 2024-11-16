@@ -11,7 +11,7 @@ resetbutn.addEventListener("click", ()=>{
         box.innerText="";
         box.disabled = false;
         winnershow.style.display ="";
-        box.style.color="red";
+        box.style.color="brown";
         box.style.backgroundColor="";
         playerx = true;
     });
@@ -21,6 +21,7 @@ winnerbtn.addEventListener("click", ()=>{
         box.innerText="";
         box.disabled = false;
         winnershow.style.display ="";
+        resetbutn.style.display = "";
         box.style.color="brown";
         box.style.backgroundColor="";
         playerx = true;
@@ -45,12 +46,10 @@ boxes.forEach((box)=>{
             box.innerText="X";
             playerx = false;
             box.style.color="yellow"
-            // first.style.backgroundColor = "orange";
         }else{
             box.innerText = "O";
             playerx = true; 
             box.style.color="orange"
-            // first.style.backgroundColor = "orange";
             
         }
         box.disabled = true;
@@ -61,6 +60,7 @@ const disableallbt = ()=>{
     for(let box of boxes){
         box.disabled = true;
     }
+    resetbutn.style.display = "none";
     
 }
 const checkdraw = ()=>{
@@ -70,6 +70,7 @@ const checkdraw = ()=>{
         }
     }
     winnershow.style.display ="flex";
+    resetbutn.style.display = "none";
     messagewin.innerText ="Draw";
     playerx = true;
 
@@ -101,6 +102,5 @@ const checkwinner = ()=>{
                 checkdraw();
             }
         }
-        // return;
     }
 }
